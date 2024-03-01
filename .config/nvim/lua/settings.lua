@@ -24,9 +24,8 @@ opt.splitright = true
 opt.number = true
 opt.relativenumber = true
 
-api.nvim_set_var('g:netrw_banner', 0);
-api.nvim_set_var('g:netrw_hide', 0);
-api.nvim_set_var('g:netrw_hide', 0);
+v.g.netrw_banner = 0
+v.g.netrw_hide = 0
 
 v.g.colorcolumn = 100
 opt.pumheight = 15
