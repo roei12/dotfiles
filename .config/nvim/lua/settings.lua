@@ -1,8 +1,14 @@
 local v = vim
 local opt = v.opt
-local api = v.api
 
 vim.g.mapleader = " "
+vim.o.termguicolors = true
+
+vim.o.undofile = true
+vim.o.swapfile = false
+
+vim.o.cole = 2
+vim.o.cocu = 'n'
 
 v.g.loaded_ruby_provider = 0
 v.g.loaded_python3_provider = 0
