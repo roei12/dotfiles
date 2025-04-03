@@ -1,19 +1,9 @@
 return {
-    {
-        'neovim/nvim-lspconfig',
-        lazy = false,
+    'nvim-lspconfig',
+    event = 'BufReadPost',
+    keys = {
     },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        dependencies = {
-            { "nushell/tree-sitter-nu" },
-        },
-        lazy = false,
-    },
-    {
-        'williamboman/mason.nvim',
-        lazy = false,
-        config = true,
-        cmd = 'Mason',
-    },
+    after = function()
+        require'lspconfig'.clangd.setup{}
+    end
 }
