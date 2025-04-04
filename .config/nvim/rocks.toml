@@ -30,3 +30,7 @@ rev = "v3.7"
 [plugins.vim-tmux-navigator]
 git = "christoomey/vim-tmux-navigator"
 rev = "v1.0"
+
+[plugins."blink.cmp"]
+git = "saghen/blink.cmp"
+rev = "v1.1.1"

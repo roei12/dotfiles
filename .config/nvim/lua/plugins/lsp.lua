@@ -1,9 +1,8 @@
 return {
     'nvim-lspconfig',
     event = 'BufReadPost',
-    keys = {
-    },
     after = function()
-        require'lspconfig'.clangd.setup{}
+        local capabilities = require(vim.g.cmp_plugin).get_lsp_capabilities()
+        require'lspconfig'.clangd.setup{ capabilities = capabilities }
     end
 }
