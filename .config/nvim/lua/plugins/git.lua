@@ -1,8 +1,8 @@
 return {
     {
         'vim-fugitive',
-        cmd = 'Git',
-        keys = {
+        -- cmd = 'Git',
+        lazy = false, keys = {
             {'<leader>G', vim.cmd.Git},
             {'<leader>gp', function() vim.cmd.Git('pull') end},
             {'<leader>gP', function() vim.cmd.Git('push') end},
