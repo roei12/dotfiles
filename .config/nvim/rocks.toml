@@ -41,6 +41,16 @@ git = "christoomey/vim-tmux-navigator"
 rev = "v1.0"
 opt = true
 
+[plugins.vlime]
+git = "vlime/vlime"
+rev = "v0.4.0"
+opt = true
+
+[plugins.paredit]
+git = "kovisoft/paredit"
+rev = "0.9.11"
+opt = true
+
 [treesitter]
 # auto_highlight = "all"
 # NOTE: These are parsers, not filetypes.
