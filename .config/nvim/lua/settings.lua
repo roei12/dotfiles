@@ -4,6 +4,7 @@ local opt = v.opt
 vim.cmd.colorscheme('gruvbox-material')
 
 vim.g.mapleader = " "
+vim.g.localleader = ","
 vim.o.termguicolors = true
 
 vim.o.undofile = true
@@ -37,6 +38,14 @@ v.g.netrw_hide = 0
 
 v.g.colorcolumn = 100
 opt.pumheight = 15
+
+vim.diagnostic.config{
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert  = false,
+    severity_sort = true,
+}
 
 vim.api.nvim_create_autocmd('TextYankPost', { command = 'lua vim.highlight.on_yank {timeout=100}'})
 
