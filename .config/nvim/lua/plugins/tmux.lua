@@ -8,6 +8,7 @@ return {
     "TmuxNavigatePrevious",
     "TmuxNavigatorProcessList",
   },
+  lazy = true,
   keys = {
     { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
     { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
