@@ -7,6 +7,9 @@ vim.g.mapleader = " "
 vim.g.localleader = ","
 vim.o.termguicolors = true
 
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
 vim.o.undofile = true
 vim.o.swapfile = false
 
