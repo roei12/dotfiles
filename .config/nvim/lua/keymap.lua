@@ -8,9 +8,6 @@ vim.keymap.set({'n', 'v'}, '<leader>y', '"+y')
 -- Git
 vim.keymap.set({'n'}, '<leader>G', vim.cmd.Git)
 
-vim.keymap.set('n', '<leader>ff', function() require'telescope.builtin'.find_files() end);
-vim.keymap.set('n', '<leader>fg', function() require'telescope.builtin'.live_grep() end);
-vim.keymap.set('n', '<leader>fw', function() require'telescope.builtin'.grep_string({search = vim.fn.expand'<cword>'}) end);
 -- Lsp
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)

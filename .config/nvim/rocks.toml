@@ -22,6 +22,8 @@ nvim-lspconfig = { version = "2.3.0", opt = true }
 nvim-surround = { version = "3.1.2", opt = true }
 tree-sitter-gleam = "0.0.41"
 tree-sitter-toml = "0.0.31"
+tree-sitter-cpp = "0.0.45"
+"telescope.nvim" = {version = "scm", opt = true }
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
