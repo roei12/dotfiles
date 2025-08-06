@@ -52,3 +52,11 @@ vim.diagnostic.config{
 
 vim.api.nvim_create_autocmd('TextYankPost', { command = 'lua vim.highlight.on_yank {timeout=100}'})
 
+local lsp = vim.lsp
+lsp.config('*', {
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+lsp.enable('clangd')
+lsp.enable('gleam')
+lsp.enable('lua_ls')
