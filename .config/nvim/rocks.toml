@@ -19,7 +19,7 @@ gruvbox-material = { version = "1.2.5" }
 "lz.n" = { version = "2.11.2" }
 nvim-lspconfig = { version = "2.3.0", opt = true }
 "rainbow-delimiters.nvim" = { version = "0.9.1", opt = true }
-nvim-surround = { version = "3.1.2" }
+nvim-surround = { version = "3.1.2", opt = true }
 tree-sitter-gleam = "0.0.41"
 tree-sitter-toml = "0.0.31"
 
