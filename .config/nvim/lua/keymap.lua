@@ -7,6 +7,9 @@ vim.keymap.set({'n', 'v'}, '<leader>y', '"+y')
 
 -- Git
 vim.keymap.set({'n'}, '<leader>G', vim.cmd.Git)
+vim.keymap.set({'n'}, '<leader>gha', function() 
+    vim.cmd.Gitsigns("stage_hunk")
+end)
 
 -- Lsp
 vim.api.nvim_create_autocmd('LspAttach', {

@@ -17,6 +17,7 @@ return {
         lazy = false,
         keys = {
             {'<leader>ghv', function() vim.cmd.Gitsigns("preview_hunk") end},
+            {'<leader>gha', function() vim.cmd.Gitsigns("stage_hunk") end},
         },
         after = function() require'gitsigns'.setup() end,
     },
