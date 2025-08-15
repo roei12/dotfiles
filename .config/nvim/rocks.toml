@@ -24,6 +24,8 @@ tree-sitter-gleam = "0.0.41"
 tree-sitter-toml = "0.0.31"
 tree-sitter-cpp = "0.0.45"
 "telescope.nvim" = {version = "scm", opt = true }
+"indent-blankline.nvim" = {version = "3.9.0", opt = true}
+nvim-treesitter-context = {version = "1.0.0", opt = true}
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
