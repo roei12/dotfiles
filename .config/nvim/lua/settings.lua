@@ -60,3 +60,9 @@ lsp.config('*', {
 lsp.enable('clangd')
 lsp.enable('gleam')
 lsp.enable('lua_ls')
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldtext = ''
+-- vim.opt.fillchars = 'fold: '
+vim.opt.foldlevelstart = 99
