@@ -56,6 +56,10 @@ git = "kovisoft/paredit"
 rev = "0.9.11"
 opt = true
 
+[plugins."codecompanion.nvim"]
+git = "olimorris/codecompanion.nvim"
+rev = "v17.15.0"
+
 [treesitter]
 # auto_highlight = "all"
 # NOTE: These are parsers, not filetypes.
