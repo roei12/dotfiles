@@ -28,6 +28,9 @@ tree-sitter-cpp = "0.0.45"
 nvim-treesitter-context = {version = "1.0.0", opt = true}
 tree-sitter-markdown = "0.0.44"
 tree-sitter-markdown_inline = "0.0.42"
+tree-sitter-go = "0.0.40"
+tree-sitter-python = "0.0.46"
+tree-sitter-sql = "0.0.41"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"

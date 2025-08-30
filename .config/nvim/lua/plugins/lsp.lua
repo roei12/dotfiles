@@ -15,6 +15,8 @@ return {
             lsp.enable('clangd')
             lsp.enable('gleam')
             lsp.enable('lua_ls')
+            lsp.enable('gopls')
+            lsp.enable('pyright')
         end,
     },
 }
