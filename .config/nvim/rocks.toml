@@ -31,6 +31,7 @@ tree-sitter-markdown_inline = "0.0.42"
 tree-sitter-go = "0.0.40"
 tree-sitter-python = "0.0.46"
 tree-sitter-sql = "0.0.41"
+tree-sitter-rust = "0.0.51"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"

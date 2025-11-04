@@ -1,8 +1,6 @@
 local v = vim
 local opt = v.opt
 
-vim.cmd.colorscheme('gruvbox-material')
-
 vim.g.mapleader = " "
 vim.g.localleader = ","
 vim.o.termguicolors = true

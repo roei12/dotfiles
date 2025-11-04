@@ -1,5 +1,6 @@
 return {
     'blink.cmp',
+    lazy = true,
     event = 'InsertEnter',
     beforeAll = function()
         vim.g.cmp_plugin = 'blink.cmp'
