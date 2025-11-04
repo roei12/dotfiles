@@ -1,5 +1,12 @@
 return {
     {
+        'gruvbox-material',
+        lazy = false,
+        after = function ()
+            vim.cmd.colorscheme('gruvbox-material')
+        end
+    },
+    {
         'indent-blankline',
         lazy = true,
         event = 'BufReadPost',

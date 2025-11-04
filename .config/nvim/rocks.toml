@@ -11,7 +11,7 @@
 # List of Neovim plugins to install alongside their versions.
 # If the plugin name contains a dot then you must add quotes to the key name!
 [plugins]
-"rocks.nvim" = { version = "2.45.0", opt = true } # rocks.nvim can also manage itself :D
+"rocks.nvim" = { version = "2.46.1" } # rocks.nvim can also manage itself :D
 gruvbox-material = { version = "1.2.5" }
 "rocks-git.nvim" = { version = "2.5.3" }
 "rocks-treesitter.nvim" = "1.3.0"
@@ -20,12 +20,12 @@ gruvbox-material = { version = "1.2.5" }
 nvim-lspconfig = { version = "2.3.0", opt = true }
 "rainbow-delimiters.nvim" = { version = "0.9.1", opt = true }
 nvim-surround = { version = "3.1.2", opt = true }
-tree-sitter-gleam = "0.0.41"
-tree-sitter-toml = "0.0.31"
-tree-sitter-cpp = "0.0.45"
 "telescope.nvim" = {version = "scm", opt = true }
 "indent-blankline.nvim" = {version = "3.9.0", opt = true}
 nvim-treesitter-context = {version = "1.0.0", opt = true}
+tree-sitter-gleam = "0.0.41"
+tree-sitter-toml = "0.0.31"
+tree-sitter-cpp = "0.0.45"
 tree-sitter-markdown = "0.0.44"
 tree-sitter-markdown_inline = "0.0.42"
 tree-sitter-go = "0.0.40"
@@ -58,28 +58,3 @@ opt = true
 git = "kovisoft/paredit"
 rev = "0.9.11"
 opt = true
-
-[plugins."codecompanion.nvim"]
-git = "olimorris/codecompanion.nvim"
-rev = "v17.15.0"
-
-[treesitter]
-# auto_highlight = "all"
-# NOTE: These are parsers, not filetypes.
-auto_highlight = [
-  "rust",
-  "toml",
-  "c",
-  "gleam",
-  "commonlisp",
-  "markdown",
-  "markdown-inline",
-]
-auto_install = "prompt" # true | false
-
-[treesitter.parser_map]
-# You can add custom filetype to parser mappings.
-# Determine the filetype with ':lua =vim.bo[0].filetype'.
-# NOTE: You don't actually have to add these examples.
-# They are added by default.
-lisp = "commonlisp"
