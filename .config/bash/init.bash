@@ -1,5 +1,6 @@
 source $HOME/.config/bash/aliases.bash
 source $HOME/.config/bash/sensible.bash
+source $HOME/.config/bash/settings.bash
 
 export PATH=$PATH:$HOME/.local/bin
 
