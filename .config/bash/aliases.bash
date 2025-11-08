@@ -1,4 +1,4 @@
-alias cat='batcat -pp -theme gruvbox-dark'
+alias cat='batcat -pp --theme gruvbox-dark'
 alias ls='eza'
 
 run10 () {
