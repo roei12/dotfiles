@@ -1,9 +1,19 @@
 return {
+    -- {
+    --     'gruvbox-material',
+    --     lazy = false,
+    --     after = function ()
+    --         vim.cmd.colorscheme('gruvbox-material')
+    --     end
+    -- },
     {
-        'gruvbox-material',
+        'vim-moonfly-colors',
         lazy = false,
-        after = function ()
-            vim.cmd.colorscheme('gruvbox-material')
+        after = function()
+            require('moonfly').custom_colors({
+                bg = "#000000",
+            })
+            vim.cmd.colorscheme('moonfly')
         end
     },
     {
