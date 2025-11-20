@@ -6,6 +6,14 @@ export PATH=$PATH:$HOME/.local/bin
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-eval -- "$(jj util completion bash)"
-eval -- "$(starship init bash --print-full-init)"
-eval -- "$(zoxide init bash)"
+if command -v jj >/dev/null; then
+    eval -- "$(jj util completion bash)"
+fi
+
+if command -v starship >/dev/null; then
+    eval -- "$(starship init bash --print-full-init)"
+fi
+
+if command -v zoxide >/dev/null; then
+    eval -- "$(zoxide init bash)"
+fi
