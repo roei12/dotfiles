@@ -8,6 +8,15 @@ return {
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('gopls')
             vim.lsp.enable('pyright')
+            vim.lsp.config('rust_analyzer', {
+                settings = {
+                    ['rust-analyzer'] = {
+                        check = {
+                            command = "clippy"
+                        }
+                    }
+                }
+            })
             vim.lsp.enable('rust_analyzer')
         end,
     },
