@@ -1,19 +1,10 @@
 return {
-    -- {
-    --     'gruvbox-material',
-    --     lazy = false,
-    --     after = function ()
-    --         vim.cmd.colorscheme('gruvbox-material')
-    --     end
-    -- },
     {
-        'vim-moonfly-colors',
+        'darkbox.nvim',
         lazy = false,
         after = function()
-            require('moonfly').custom_colors({
-                bg = "#000000",
-            })
-            vim.cmd.colorscheme('moonfly')
+            require('darkbox').load()
+            vim.cmd.colorscheme('darkbox')
         end
     },
     {
@@ -29,9 +20,9 @@ return {
         lazy = true,
         event = 'BufReadPost',
         after = function()
-            require'treesitter-context'.setup {
+            require 'treesitter-context'.setup {
                 enable = true,
             }
         end,
-    }
+    },
 }

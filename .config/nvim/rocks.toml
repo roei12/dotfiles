@@ -60,3 +60,7 @@ opt = true
 git = "kovisoft/paredit"
 rev = "0.9.11"
 opt = true
+
+[plugins."darkbox.nvim"]
+git = "timmypidashev/darkbox.nvim"
+rev = "40960993dc99d8a9c1c99e91bd702ff6964c3ccd"
