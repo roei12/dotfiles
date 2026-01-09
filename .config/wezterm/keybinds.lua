@@ -1,0 +1,40 @@
+local wezterm = require('wezterm')
+local actions = wezterm.action
+local split_nav = require('plugins.smart-splits').split_nav
+
+local function map(key, mods, action)
+    return {
+        mods = mods,
+        key = key,
+        action = action
+    }
+end
+
+-- Generate leader map
+local lmap = function(key, action)
+    return map(key, 'LEADER', action)
+end
+
+return {
+    -- splitting
+    lmap('-', actions.SplitVertical { domain = 'CurrentPaneDomain' }),
+    lmap('\\', actions.SplitHorizontal { domain = 'CurrentPaneDomain' }),
+
+    -- zoom
+    lmap('z', actions.TogglePaneZoomState),
+
+    -- copy mode
+    lmap('[', actions.ActivateCopyMode),
+
+    -- split resize
+    map('h', 'ALT', actions.AdjustPaneSize {"Left", 1}),
+    map('j', 'ALT', actions.AdjustPaneSize {"Down", 1}),
+    map('k', 'ALT', actions.AdjustPaneSize {"Up", 1}),
+    map('l', 'ALT', actions.AdjustPaneSize {"Right", 1}),
+
+    -- smart-splits
+    split_nav('h'),
+    split_nav('j'),
+    split_nav('k'),
+    split_nav('l'),
+}
