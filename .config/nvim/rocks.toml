@@ -16,12 +16,10 @@ gruvbox-material = { version = "1.2.5" }
 "rocks-git.nvim" = { version = "2.5.3" }
 "rocks-treesitter.nvim" = "1.3.0"
 "oil.nvim" = { version = "2.15.0" }
-"lz.n" = { version = "2.11.2" }
+"lz.n" = { version = "2.12.2" }
 nvim-lspconfig = { version = "2.5.0" }
 "rainbow-delimiters.nvim" = { version = "0.9.1", opt = true }
 nvim-surround = { version = "3.1.2", opt = true }
-"telescope.nvim" = {version = "scm", opt = true }
-"indent-blankline.nvim" = {version = "3.9.0", opt = true}
 nvim-treesitter-context = {version = "1.0.0", opt = true}
 tree-sitter-gleam = "0.0.41"
 tree-sitter-toml = "0.0.31"
@@ -33,6 +31,11 @@ tree-sitter-python = "0.0.46"
 tree-sitter-sql = "0.0.41"
 tree-sitter-rust = "0.0.51"
 vim-moonfly-colors = "scm"
+"smart-splits.nvim" = { version = "2.0.5", opt = true }
+
+[plugins."snacks.nvim" ]
+version = "2.30.0"
+opt = true
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
@@ -64,3 +67,8 @@ opt = true
 [plugins."darkbox.nvim"]
 git = "timmypidashev/darkbox.nvim"
 rev = "40960993dc99d8a9c1c99e91bd702ff6964c3ccd"
+
+[plugins."claudecode.nvim"]
+git = "coder/claudecode.nvim"
+rev = "v0.3.0"
+opt = true

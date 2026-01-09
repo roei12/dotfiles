@@ -1,19 +1,10 @@
 return {
-    'vim-tmux-navigator',
-    cmd = {
-    "TmuxNavigateLeft",
-    "TmuxNavigateDown",
-    "TmuxNavigateUp",
-    "TmuxNavigateRight",
-    "TmuxNavigatePrevious",
-    "TmuxNavigatorProcessList",
-  },
-  lazy = true,
-  keys = {
-    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-  },
+    'smart-splits.nvim',
+    lazy = false,
+    keys = {
+        { "<c-h>", require('smart-splits').move_cursor_left },
+        { "<c-j>", require('smart-splits').move_cursor_down },
+        { "<c-k>", require('smart-splits').move_cursor_up },
+        { "<c-l>", require('smart-splits').move_cursor_right },
+    },
 }
