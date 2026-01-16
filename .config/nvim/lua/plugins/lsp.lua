@@ -3,6 +3,7 @@ return {
         'nvim-lspconfig',
         lazy = false,
         after = function()
+            vim.lsp.enable('terraformls')
             vim.lsp.enable('clangd')
             vim.lsp.enable('gleam')
             vim.lsp.enable('lua_ls')

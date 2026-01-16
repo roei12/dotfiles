@@ -12,7 +12,7 @@ vim.o.undofile = true
 vim.o.swapfile = false
 
 vim.o.cole = 2
-vim.o.cocu = 'n'
+vim.o.cocu = ''
 
 v.g.loaded_ruby_provider = 0
 v.g.loaded_python3_provider = 0

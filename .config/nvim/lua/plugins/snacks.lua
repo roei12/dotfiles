@@ -18,13 +18,14 @@ return {
     after = function()
         -- disable animations
         vim.g.snacks_animate = false
+        vim.g.snacks_dim = false
         require('snacks').setup {
             indent = { enabled = true },
             input = { enabled = true },
             picker = { enabled = true },
             rename = { enabled = true },
             words = { enabled = true },
-            zen = { enabled = true, toggle = { dim = false } },
+            zen = { enabled = true },
             notifier = { enabled = true },
             -- bigfile = { enabled = false },
             -- dashboard = { enabled = false },
