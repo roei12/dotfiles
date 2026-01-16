@@ -26,11 +26,21 @@ return {
     -- copy mode
     lmap('[', actions.ActivateCopyMode),
 
+    -- rename tab
+    lmap('n', actions.PromptInputLine {
+        description = "Rename Tab to: ",
+        action = wezterm.action_callback(function(window, _, line)
+            if line then
+                window:active_tab():set_title(line)
+            end
+        end),
+    }),
+
     -- split resize
-    map('h', 'ALT', actions.AdjustPaneSize {"Left", 1}),
-    map('j', 'ALT', actions.AdjustPaneSize {"Down", 1}),
-    map('k', 'ALT', actions.AdjustPaneSize {"Up", 1}),
-    map('l', 'ALT', actions.AdjustPaneSize {"Right", 1}),
+    map('h', 'ALT', actions.AdjustPaneSize { "Left", 1 }),
+    map('j', 'ALT', actions.AdjustPaneSize { "Down", 1 }),
+    map('k', 'ALT', actions.AdjustPaneSize { "Up", 1 }),
+    map('l', 'ALT', actions.AdjustPaneSize { "Right", 1 }),
 
     -- smart-splits
     split_nav('h'),
