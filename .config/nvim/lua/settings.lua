@@ -37,7 +37,7 @@ opt.relativenumber = true
 v.g.netrw_banner = 0
 v.g.netrw_hide = 0
 
-v.g.colorcolumn = 100
+v.g.colorcolumn = 120
 opt.pumheight = 15
 
 vim.diagnostic.config {
