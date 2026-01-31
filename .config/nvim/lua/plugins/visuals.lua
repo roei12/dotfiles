@@ -5,17 +5,12 @@ return {
         after = function()
             vim.g.gruvbox_material_enable_italics = true
             vim.g.gruvbox_material_background = 'hard'
+            if vim.g.transparent_bg then
+                vim.g.gruvbox_material_transparent_background = 1
+            end
             vim.cmd.colorscheme('gruvbox-material')
         end
     },
-    -- {
-    --     'darkbox.nvim',
-    --     lazy = false,
-    --     after = function()
-    --         require('darkbox').load()
-    --         vim.cmd.colorscheme('darkbox')
-    --     end
-    -- },
     {
         'nvim-treesitter-context',
         lazy = true,

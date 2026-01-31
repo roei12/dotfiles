@@ -13,10 +13,12 @@ vim.o.swapfile = false
 vim.o.cole = 2
 vim.o.cocu = ''
 
-v.g.loaded_ruby_provider = 0
-v.g.loaded_python3_provider = 0
-v.g.loaded_node_provider = 0
-v.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+
+vim.g.transparent_bg = true -- custom global to control plugins
 
 opt.expandtab = true
 opt.tabstop = 4

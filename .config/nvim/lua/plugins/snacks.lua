@@ -1,3 +1,10 @@
+local set_hl = function()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none", nocombine = true })
+    vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
+    vim.api.nvim_set_hl(0, "SnacksPickerBorder", { bg = "none", nocombine = true })
+    vim.api.nvim_set_hl(0, "SnacksBackdrop_T", { bg = "none", nocombine = true })
+end
+
 return {
     'snacks.nvim',
     lazy = false,
@@ -27,13 +34,11 @@ return {
             words = { enabled = true },
             zen = { enabled = true },
             notifier = { enabled = true },
-            -- bigfile = { enabled = false },
-            -- dashboard = { enabled = false },
-            -- explorer = { enabled = false },
-            -- quickfile = { enabled = false },
-            -- scope = { enabled = false },
-            -- scroll = { enabled = false },
-            -- statuscolumn = { enabled = false },
         }
+        vim.api.nvim_create_autocmd("ColorScheme", {
+            pattern = "*",
+            callback = set_hl
+        })
+        set_hl()
     end,
 }
