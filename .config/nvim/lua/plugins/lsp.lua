@@ -8,7 +8,7 @@ return {
             vim.lsp.enable('gleam')
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('gopls')
-            vim.lsp.config('pyright', {
+            vim.lsp.config('basedpyright', {
                 settings = {
                     python = {
                         analysis = {
@@ -21,7 +21,7 @@ return {
                     client.server_capabilities.documentRangeFormattingProvider = false
                 end,
             })
-            vim.lsp.enable('pyright')
+            vim.lsp.enable('basedpyright')
             vim.lsp.config('ruff', {
                 on_attach = function(client, _)
                     client.server_capabilities.documentFormattingProvider = true
