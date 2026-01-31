@@ -71,3 +71,11 @@ rev = "40960993dc99d8a9c1c99e91bd702ff6964c3ccd"
 git = "coder/claudecode.nvim"
 rev = "v0.3.0"
 opt = true
+
+[plugins."wezterm.nvim"]
+git = "willothy/wezterm.nvim"
+rev = "v0.5.0"
+
+[plugins.vim-abolish]
+git = "tpope/vim-abolish"
+rev = "v1.2"

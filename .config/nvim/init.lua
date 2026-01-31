@@ -1,5 +1,5 @@
 require('rocks')
 require('settings')
 require('keymap')
+require('utils')
 require('lz.n').load('plugins')
-
