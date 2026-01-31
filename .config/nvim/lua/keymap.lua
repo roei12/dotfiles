@@ -5,6 +5,9 @@ vim.keymap.set('i', 'jk', '<Esc>l')
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p')
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 
+
+vim.keymap.set({ 'n' }, '<leader>c', vim.cmd.bd)
+
 -- Git
 vim.keymap.set({ 'n' }, '<leader>G', vim.cmd.Git)
 vim.keymap.set({ 'n' }, '<leader>gha', function()
