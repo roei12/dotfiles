@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.52.6",
+  "defaultProvider": "openrouter",
+  "defaultModel": "z-ai/glm-4.7",
+  "defaultThinkingLevel": "low",
+  "compaction": {
+    "enabled": false
+  },
+  "hideThinkingBlock": false,
+  "theme": "dark"
+}
