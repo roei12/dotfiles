@@ -6,9 +6,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Plugins
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ $(uname) == "Linux" ]]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+else
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
 # vi mode binds
 bindkey -v 
@@ -62,3 +68,5 @@ alias cd='z'
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/roeil/.lmstudio/bin"
 # End of LM Studio CLI section
+
+source $HOME/secrets.env

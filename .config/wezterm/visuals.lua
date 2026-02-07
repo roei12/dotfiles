@@ -7,9 +7,10 @@ function M.apply(config)
     local scheme = wezterm.color.get_builtin_schemes()[config.color_scheme]
 
     config.font_size = 16
-
-    config.window_background_opacity = 0.85
-    config.macos_window_background_blur = 20
+    if wezterm.target_triple:find("darwin") ~= nil then
+        config.window_background_opacity = 0.85
+        config.macos_window_background_blur = 20
+    end
 
     config.window_decorations = "NONE"
     config.use_fancy_tab_bar = false
