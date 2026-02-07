@@ -8,6 +8,7 @@ return {
             vim.lsp.enable('gleam')
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('gopls')
+            vim.lsp.enable('ts_ls')
             vim.lsp.config('basedpyright', {
                 settings = {
                     python = {
