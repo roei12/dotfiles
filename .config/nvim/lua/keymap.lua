@@ -18,10 +18,11 @@ end)
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args)
         local bufopts = { noremap = true, silent = true, buffer = args.buf }
-        vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, bufopts)
-        vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, bufopts)
-        vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, bufopts)
-        vim.keymap.set('n', 'gl', vim.diagnostic.open_float, bufopts)
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+        vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, bufopts)      -- grn
+        vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, bufopts) -- gra
+        vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, bufopts)      -- grn
+        vim.keymap.set('n', 'grl', vim.diagnostic.open_float, bufopts)
+        vim.keymap.set('n', 'grd', vim.lsp.buf.definition, bufopts)
+        vim.keymap.set('n', 'grf', vim.lsp.buf.format, bufopts)
     end
 })
