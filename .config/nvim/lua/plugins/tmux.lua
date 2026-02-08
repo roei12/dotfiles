@@ -1,15 +1,5 @@
 return {
     {
-        'smart-splits.nvim',
-        lazy = false,
-        keys = {
-            { "<c-h>", require('smart-splits').move_cursor_left },
-            { "<c-j>", require('smart-splits').move_cursor_down },
-            { "<c-k>", require('smart-splits').move_cursor_up },
-            { "<c-l>", require('smart-splits').move_cursor_right },
-        },
-    },
-    {
         'wezterm.nvim',
         lazy = false,
         after = function()
@@ -17,5 +7,47 @@ return {
                 create_commands = false,
             }
         end,
-    }
+    },
+    {
+        'smart-splits.nvim',
+        lazy = false,
+        keys = {
+            {
+                "<c-h>",
+                function()
+                    local wezterm = require('wezterm')
+                    local pane_id = wezterm.get_current_pane()
+                    wezterm.zoom_pane(pane_id, { unzoom = true })
+                    require('smart-splits').move_cursor_left()
+                end
+            },
+            {
+                "<c-j>",
+                function()
+                    local wezterm = require('wezterm')
+                    local pane_id = wezterm.get_current_pane()
+                    wezterm.zoom_pane(pane_id, { unzoom = true })
+                    require('smart-splits').move_cursor_down()
+                end
+            },
+            {
+                "<c-k>",
+                function()
+                    local wezterm = require('wezterm')
+                    local pane_id = wezterm.get_current_pane()
+                    wezterm.zoom_pane(pane_id, { unzoom = true })
+                    require('smart-splits').move_cursor_up()
+                end
+            },
+            {
+                "<c-l>",
+                function()
+                    local wezterm = require('wezterm')
+                    local pane_id = wezterm.get_current_pane()
+                    wezterm.zoom_pane(pane_id, { unzoom = true })
+                    require('smart-splits').move_cursor_right()
+                end
+            },
+        },
+    },
 }

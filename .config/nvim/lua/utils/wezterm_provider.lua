@@ -1,10 +1,6 @@
 local M = {}
 local wezterm = require('wezterm')
 
-local function notify(msg)
-    vim.notify("WeztermProvider: " .. msg)
-end
-
 function M:get_nvim_pane()
     if self.nvim_pane ~= nil then
         return self.nvim_pane

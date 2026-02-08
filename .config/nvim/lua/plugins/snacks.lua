@@ -32,7 +32,19 @@ return {
             picker = { enabled = true },
             rename = { enabled = true },
             words = { enabled = true },
-            zen = { enabled = true },
+            zen = {
+                enabled = true,
+                on_open = function()
+                    local wezterm = require('wezterm')
+                    local pane_id = wezterm.get_current_pane()
+                    wezterm.zoom_pane(pane_id, { zoom = true })
+                end,
+                on_close = function()
+                    local wezterm = require('wezterm')
+                    local pane_id = wezterm.get_current_pane()
+                    wezterm.zoom_pane(pane_id, { unzoom = true })
+                end,
+            },
             notifier = { enabled = true },
         }
         vim.api.nvim_create_autocmd("ColorScheme", {
