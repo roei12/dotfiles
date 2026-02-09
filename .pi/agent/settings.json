@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.52.6",
-  "defaultProvider": "openrouter",
-  "defaultModel": "z-ai/glm-4.7",
-  "defaultThinkingLevel": "low",
+  "lastChangelogVersion": "0.52.8",
+  "defaultProvider": "amazon-bedrock",
+  "defaultModel": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+  "defaultThinkingLevel": "medium",
   "compaction": {
     "enabled": false
   },
