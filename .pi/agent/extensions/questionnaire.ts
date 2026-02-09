@@ -214,10 +214,7 @@ export default function questionnaire(pi: ExtensionAPI) {
                     const lines: string[] = [];
                     const q = currentQuestion();
 
-                    // Helper to add truncated line
-                    const add = (s: string) => lines.push(truncateToWidth(s, width));
-
-                    add(theme.fg("accent", "─".repeat(width)));
+                    lines.push(theme.fg("accent", "─".repeat(width)));
 
                     // Tab bar (multi-question only)
                     if (isMulti) {
@@ -240,45 +237,45 @@ export default function questionnaire(pi: ExtensionAPI) {
                             ? theme.bg("selectedBg", theme.fg("text", submitText))
                             : theme.fg(canSubmit ? "success" : "dim", submitText);
                         tabs.push(`${submitStyled} →`);
-                        add(` ${tabs.join("")}`);
+                        lines.push(` ${tabs.join("")}`);
                         lines.push("");
                     }
 
                     // Content
                     if (currentTab === questions.length) {
                         // Submit tab - show all answers
-                        add(theme.fg("accent", theme.bold(" Ready to submit")));
+                        lines.push(theme.fg("accent", theme.bold(" Ready to submit")));
                         lines.push("");
                         for (const question of questions) {
                             const answer = answers.get(question.id);
                             if (answer) {
                                 const displayAnswer = answer.answer || "(no response)";
-                                add(`${theme.fg("muted", ` ${question.label}: `)}${theme.fg("text", displayAnswer)}`);
+                                lines.push(`${theme.fg("muted", ` ${question.label}: `)}${theme.fg("text", displayAnswer)}`);
                             }
                         }
                         lines.push("");
                         if (allAnswered()) {
-                            add(theme.fg("success", " Press Enter to submit"));
+                            lines.push(theme.fg("success", " Press Enter to submit"));
                         } else {
                             const missing = questions
                                 .filter((q) => !answers.has(q.id))
                                 .map((q) => q.label)
                                 .join(", ");
-                            add(theme.fg("warning", ` Unanswered: ${missing}`));
+                            lines.push(theme.fg("warning", ` Unanswered: ${missing}`));
                         }
                     } else if (q) {
                         // Question tab - show question, hints, and editor
-                        add(theme.fg("text", ` ${q.question}`));
+                        lines.push(theme.fg("text", ` ${q.question}`));
                         if (q.hints) {
                             lines.push("");
                             for (const hintLine of q.hints.split('\n')) {
-                                add(`  ${theme.fg("dim", hintLine)}`);
+                                lines.push(`  ${theme.fg("dim", hintLine)}`);
                             }
                         }
                         lines.push("");
-                        add(theme.fg("muted", " Your answer:"));
+                        lines.push(theme.fg("muted", " Your answer:"));
                         for (const line of editor.render(width - 2)) {
-                            add(` ${line}`);
+                            lines.push(` ${line}`);
                         }
                         lines.push("");
                         // const helpText = isMulti
@@ -288,7 +285,7 @@ export default function questionnaire(pi: ExtensionAPI) {
                     }
 
                     lines.push("");
-                    add(theme.fg("accent", "─".repeat(width)));
+                    lines.push(theme.fg("accent", "─".repeat(width)));
 
                     cachedLines = lines;
                     return lines;
